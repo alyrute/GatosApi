@@ -1,12 +1,37 @@
 import React from 'react'
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import StackGatos from './StackGatos'
+import StackFavoritos from './StackFavoritos'
+import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { Text } from 'react-native'
 
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator()
 
 export default function Menu() {
   return (
-    <Stack.Navigator>
-
-    </Stack.Navigator>
+    <Tab.Navigator>
+        <Tab.Screen
+            name='Gatos'
+            component={StackGatos}
+            options={{
+                tabBarIcon: ( { size, color })=>{
+                    return(
+                        <Text>Gatos</Text>
+                    )
+                }
+            }}
+        />
+        <Tab.Screen
+            name='Favoritos'
+            component={StackFavoritos}
+            options={{
+                tabBarIcon: ( { size, color })=>{
+                    return(
+                        <Text>Favoritos</Text>
+                    )
+                }
+            }}
+        />
+    </Tab.Navigator>
   )
 }
