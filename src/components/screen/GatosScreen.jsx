@@ -1,26 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FlatList, Text, TouchableOpacity, View } from 'react-native'
 import GatoCard from '../card/GatoCard'
 import { useNavigation } from '@react-navigation/native'
-
-const gatos = [
-  {
-    id: 1,
-    name: "Gatito numero 1"
-  },
-  {
-    id: 2,
-    name: "Gatillo numero 2"
-  },
-  {
-    id: 3,
-    name: "Gatin numero 3"
-  }
-]
+import { GetGatosByCategoria } from '../../apiService/apiService'
 
 export default function GatosScreen() {
-
+  const [categoria, setCategoria] = useState("cute")
+  const [gatos, setGatos] = useState([])
   const navigation = useNavigation()
+  
+  const getGatosByCategoria = (categoria) => {
+    GetGatosByCategoria(categoria)
+    .then(
+      setGatos()
+    )
+  }
 
   return (
     <View>
