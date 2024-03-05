@@ -1,7 +1,7 @@
 const API = "https://cataas.com/"
 
-async function getCutes() {
-    const response = await fetch(`${API}cats?tags=cute`);
-    const gato = await response.json();
-    console.log(gato);
+export async function getGatosByCategoria(categoria) {
+    const data = await fetch(`${API}cats?tags=${categoria}`);
+    const json = await response.json();
+    return json
 }
