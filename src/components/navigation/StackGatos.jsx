@@ -40,7 +40,6 @@ export default function StackGatos() {
 };
 const styles = StyleSheet.create({
     header: {
-
         alignItems: 'center',
         justifyContent: 'center'
 
