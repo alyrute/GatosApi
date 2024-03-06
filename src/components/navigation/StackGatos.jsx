@@ -38,7 +38,6 @@ export default function StackGatos() {
         </GatosStack.Navigator>
     );
 };
-
 const styles = StyleSheet.create({
     header: {
 
