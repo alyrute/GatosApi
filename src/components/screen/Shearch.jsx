@@ -23,6 +23,8 @@ const SearchBar = ({ placeholder, onChangeText }) => {
     );
 };
 
+{ hello }
+
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
