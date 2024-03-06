@@ -3,6 +3,8 @@ import { FlatList, Text, TouchableOpacity, View } from 'react-native'
 import GatoCard from '../card/GatoCard'
 import { useNavigation } from '@react-navigation/native'
 import { GetGatosByCategoria } from '../../apiService/apiService'
+import { SearchBar } from 'react-native-elements';
+
 
 export default function GatosScreen() {
   const [categoria, setCategoria] = useState("cute")
