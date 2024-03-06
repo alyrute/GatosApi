@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import StackGatos from './StackGatos';
@@ -35,4 +36,42 @@ export default function Menu() {
             />
         </Tab.Navigator>
     );
+=======
+import React from 'react'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import StackGatos from './StackGatos'
+import StackFavoritos from './StackFavoritos'
+import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { Text } from 'react-native'
+
+const Tab = createBottomTabNavigator()
+
+export default function Menu() {
+  return (
+    <Tab.Navigator>
+        <Tab.Screen
+            name='Gatos'
+            component={StackGatos}
+            options={{
+                tabBarIcon: ( { size, color })=>{
+                    return(
+                        <Text>Gatos</Text>
+                    )
+                }
+            }}
+        />
+        <Tab.Screen
+            name='Favoritos'
+            component={StackFavoritos}
+            options={{
+                tabBarIcon: ( { size, color })=>{
+                    return(
+                        <Text>Favoritos</Text>
+                    )
+                }
+            }}
+        />
+    </Tab.Navigator>
+  )
+>>>>>>> 1951274567911b48f659538340f36ff5d6ea2ce8
 }
