@@ -23,7 +23,7 @@ const SearchBar = ({ placeholder, onChangeText }) => {
     );
 };
 
-{ hello dfdsfdsfs }
+
 
 const styles = StyleSheet.create({
     container: {
