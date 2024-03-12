@@ -1,13 +1,15 @@
-import React from 'react'
-import { Text, View } from 'react-native'
 
-export default function GatosDetail({route}) {
+import React from 'react';
+import { View, Text } from 'react-native';
 
-  const {item} = route.params
+export default function GatosDetail({ route }) {
+  const { item } = route.params;
 
   return (
     <View>
-       <Text>{item.name}</Text>
+      <Text>ID: {item._id}</Text>
+      <Text>SIZE: {item.size}</Text>
+      <Text>TAGS: {item.tags.join(', ')}</Text>
     </View>
-  )
+  );
 }

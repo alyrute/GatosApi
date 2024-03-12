@@ -1,10 +1,10 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import React from 'react';
+import { Text, View } from 'react-native';
 
 export default function GatoCard({ item }) {
   return (
     <View>
-      <Text>{item.name}</Text>
+      <Text>ID: {item._id}</Text>
     </View>
-  )
+  );
 }

@@ -1,16 +1,16 @@
-import { NavigationContainer, DarkTheme } from '@react-navigation/native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Menu from './src/components/navigation/Menu';
 
+const Stack = createNativeStackNavigator();
 
-
-
-
-const HomeScreen = ({ navigation }) => {
+export default function App() {
   return (
-    <NavigationContainer theme={DarkTheme}>
-      <Menu />
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Menu" component={Menu} options={{ headerShown: false }} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
-};
-
-export default HomeScreen;
+}
