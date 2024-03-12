@@ -63,6 +63,7 @@ export default function CategoriasScreen() {
 }
 
 const styles = StyleSheet.create({
+  
   categoriaContainer: {
     flex: 1,
     alignItems: 'center',
